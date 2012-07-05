@@ -1,6 +1,7 @@
 module Wox
   class Task
     def run_command text, options
+      puts "Running #{text}"
       result = `#{text}`
       
       File.open(options[:results], "w") {|f| f.write result }
